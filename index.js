@@ -39,7 +39,7 @@ function init() {
     // 3Dモデルの読み込み
     const objLoader = new THREE.OBJLoader();
     objLoader.load(
-        './test_____.obj',
+        './test_____2.obj',
         function (obj) {
             scene.add(obj);
             obj.position.x = -50;
