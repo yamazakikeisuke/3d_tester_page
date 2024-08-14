@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    const width = 960;
+    const width = 1000;
     const height = 540;
 
     // レンダラーを作成
@@ -18,7 +18,10 @@ function init() {
 
     // カメラを作成
     const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-    camera.position.set(0, 0, 600);
+    camera.position.set(0,-5000,4000);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+    //camera.rotation.order = "ZYX";
+    //camera.rotation.x = 0.8;
 
     // カメラコントローラーを作成
     const controls = new THREE.OrbitControls(camera, canvasElement);
@@ -46,6 +49,16 @@ function init() {
             obj.position.y = -100;
         },
     );
+    //平面追加
+    //const size = 10000;
+    //const divisions = 10000;
+    //const gridHelper = new THREE.GridHelper( size, divisions );
+    //scene.add( gridHelper );
+
+    //軸追加
+    const size_axis = 5000;
+    const axesHelper = new THREE.AxesHelper( size_axis );
+    scene.add( axesHelper );
 
     tick();
 
