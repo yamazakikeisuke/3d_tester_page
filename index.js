@@ -56,9 +56,9 @@ function init() {
     //scene.add( gridHelper );
 
     //軸追加
-    const size_axis = 5000;
-    const axesHelper = new THREE.AxesHelper( size_axis );
-    scene.add( axesHelper );
+    //const size_axis = 5000;
+    //const axesHelper = new THREE.AxesHelper( size_axis );
+    //scene.add( axesHelper );
 
     tick();
 
