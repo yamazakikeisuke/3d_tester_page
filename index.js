@@ -18,10 +18,8 @@ function init() {
 
     // カメラを作成
     const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-    camera.position.set(0,-5000,4000);
+    camera.position.set(0,-7000,4000);
     camera.lookAt(new THREE.Vector3(0, 0, 0));
-    //camera.rotation.order = "ZYX";
-    //camera.rotation.x = 0.8;
 
     // カメラコントローラーを作成
     const controls = new THREE.OrbitControls(camera, canvasElement);
